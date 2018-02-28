@@ -1,0 +1,134 @@
+.backgroundStyles {
+  background: #2d3450 url("../images/blueBackground.jpg") center repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: #f0ffff;
+}
+.mainBorderStyles {
+  border: 5px #f1dbce solid;
+  border-radius: 5px 5px 0 0;
+  padding: 5px;
+  box-shadow: 10px 10px 40px -6px #000000;
+}
+.responsiveImg {
+  max-width: 100%;
+  height: auto;
+}
+.responsiveVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #1d2e48;
+}
+html body {
+  height: 100%;
+}
+html body .backgroundContainer {
+  background: #546c76;
+  border-radius: 5px 5px 5px 5px;
+  height: auto;
+}
+html body .backgroundContainer .main-container {
+  border: 5px #f1dbce solid;
+  border-radius: 5px 5px 0 0;
+  padding: 5px;
+  box-shadow: 10px 10px 40px -6px #000000;
+  background: #2d3450 url("../images/blueBackground.jpg") center repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: #f0ffff;
+  margin: 15px 0 15px 0;
+  box-sizing: content-box;
+  display: flex;
+  border-radius: 5px 5px 5px 5px;
+  height: 80%;
+}
+html body .backgroundContainer .mainContent {
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+html body .backgroundContainer .mainContent .cover {
+  box-sizing: border-box;
+}
+html body .backgroundContainer .mainContent .cover .companyTitle {
+  box-sizing: content-box;
+}
+html body .backgroundContainer .mainContent .content {
+  width: 100%;
+  height: auto;
+}
+html body .backgroundContainer .mainContent .content .videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+  overflow: hidden;
+}
+html body .backgroundContainer .mainContent .content .videoWrapper object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+html body .backgroundContainer .mainContent .content .videoWrapper embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+html body .backgroundContainer .mainContent .content .videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+html body .backgroundContainer .mainContent .features {
+  box-sizing: border-box;
+  margin: 5px;
+}
+html body header {
+  margin: auto;
+  border: 5px #f1dbce solid;
+  border-radius: 5px 5px 0 0;
+  padding: 5px;
+  box-shadow: 10px 10px 40px -6px #000000;
+  background-color: #d9c299;
+  display: flex;
+  justify-content: space-between;
+}
+html body header .logobox {
+  color: #162938;
+}
+html body header nav .myLink {
+  margin-right: 10px;
+  color: #162938;
+}
+html body footer {
+  display: flex;
+  justify-content: center;
+  border: 5px #f1dbce solid;
+  border-radius: 5px 5px 0 0;
+  padding: 5px;
+  box-shadow: 10px 10px 40px -6px #000000;
+  background: #2d3450 url("../images/blueBackground.jpg") center repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: #f0ffff;
+  border-radius: 0 0 5px 5px;
+}

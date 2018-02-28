@@ -1,0 +1,161 @@
+.backgroundStyles {
+  background: #2d3450 url("../images/blueBackground.jpg") center repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: #f0ffff;
+}
+.mainBorderStyles {
+  border: 5px #f1dbce solid;
+  border-radius: 5px 5px 0 0;
+  padding: 5px;
+  box-shadow: 10px 10px 40px -6px #000000;
+}
+.responsiveImg {
+  max-width: 100%;
+  height: auto;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #1d2e48;
+}
+html body {
+  height: 100%;
+}
+html body .backgroundContainer {
+  background: #546c76;
+  border-radius: 5px 5px 5px 5px;
+  height: auto;
+}
+html body .backgroundContainer .main-container {
+  border: 5px #f1dbce solid;
+  border-radius: 5px 5px 0 0;
+  padding: 5px;
+  box-shadow: 10px 10px 40px -6px #000000;
+  background: #2d3450 url("../images/blueBackground.jpg") center repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: #f0ffff;
+  margin: 15px 0 15px 0;
+  box-sizing: content-box;
+  display: flex;
+  border-radius: 5px 5px 5px 5px;
+  height: 80%;
+}
+html body .backgroundContainer .main-container .leftMenu {
+  border: 5px #f1dbce solid;
+  border-radius: 5px 5px 0 0;
+  padding: 5px;
+  box-shadow: 10px 10px 40px -6px #000000;
+  border-style: none solid none none;
+  border-radius: 0;
+  padding: 10px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  max-width: 20%;
+}
+html body .backgroundContainer .main-container .leftMenu .popular-games-section {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-flow: column wrap;
+}
+html body .backgroundContainer .main-container .leftMenu .popular-games-section h3 {
+  text-align: center;
+  color: #478592;
+}
+html body .backgroundContainer .main-container .leftMenu .popular-games-section .popGames {
+  width: 60%;
+  padding: 10px;
+}
+html body .backgroundContainer .main-container .leftMenu .gamePage {
+  display: flex;
+  justify-content: center;
+}
+html body .backgroundContainer .main-container .leftMenu .pricing {
+  display: flex;
+}
+html body .backgroundContainer .main-container .leftMenu .pricing h4 {
+  align-self: center;
+}
+html body .backgroundContainer .main-container .mainContent {
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+html body .backgroundContainer .main-container .mainContent .cover {
+  box-sizing: border-box;
+}
+html body .backgroundContainer .main-container .mainContent .cover .companyTitle {
+  box-sizing: content-box;
+}
+html body .backgroundContainer .main-container .mainContent .features {
+  box-sizing: border-box;
+  margin: 5px;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+html body .backgroundContainer .main-container .mainContent .features .streamer-link .mybutton {
+  color: white;
+  background-color: #478592;
+  padding: 5px 15px 5px 15px;
+  border-radius: 10px;
+}
+html body .backgroundContainer header {
+  margin: auto;
+  border: 5px #f1dbce solid;
+  border-radius: 5px 5px 0 0;
+  padding: 5px;
+  box-shadow: 10px 10px 40px -6px #000000;
+  background-color: #d9c299;
+  display: flex;
+  justify-content: space-between;
+}
+html body .backgroundContainer header .logobox {
+  color: #162938;
+}
+html body .backgroundContainer header nav .myLink {
+  margin-right: 10px;
+  color: #162938;
+}
+html body footer {
+  display: flex;
+  justify-content: center;
+  border: 5px #f1dbce solid;
+  border-radius: 5px 5px 0 0;
+  padding: 5px;
+  box-shadow: 10px 10px 40px -6px #000000;
+  background: #2d3450 url("../images/blueBackground.jpg") center repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: #f0ffff;
+  border-radius: 0 0 5px 5px;
+}
+#popGame1 img {
+  max-width: 100%;
+  height: auto;
+}
+#popGame2 img {
+  max-width: 100%;
+  height: auto;
+}
+#popGame3 img {
+  max-width: 100%;
+  height: auto;
+}
+#popGame4 img {
+  max-width: 100%;
+  height: auto;
+}
+#popGame5 img {
+  max-width: 100%;
+  height: auto;
+}

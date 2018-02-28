@@ -1,0 +1,157 @@
+.backgroundStyles {
+  background: #2d3450 url("../images/blueBackground.jpg") center repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: #f0ffff;
+}
+.mainBorderStyles {
+  border: 5px #f1dbce solid;
+  border-radius: 5px 5px 0 0;
+  padding: 5px;
+  box-shadow: 10px 10px 40px -6px rgba(0, 0, 0, 1);
+}
+.responsiveImg {
+  max-width: 100%;
+  height: auto;
+}
+* {
+  box-sizing: border-box;
+}
+
+
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #1d2e48;
+  body {
+    height: 100%;
+    .backgroundContainer {
+      background: #546c76;
+      border-radius: 5px 5px 5px 5px;
+      height: auto;
+      .main-container {
+        .mainBorderStyles;
+        .backgroundStyles;
+        margin: 15px 0 15px 0;
+        box-sizing: content-box;
+        display: flex;
+        border-radius: 5px 5px 5px 5px;
+        height: 80%;
+        .leftMenu {
+          .mainBorderStyles;
+          border-style: none solid none none;
+          border-radius: 0;
+          padding: 10px;
+          display: flex;
+          flex-flow: column;
+          justify-content: space-between;
+          max-width: 20%;
+          .popular-games-section {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            flex-flow: column wrap;
+            h3 {
+              text-align: center;
+              color: #478592;
+            }
+
+            .popGames {
+              width: 60%;
+              padding: 10px;
+            }
+          }
+          .gamePage{
+            display: flex;
+            justify-content: center;
+          }
+          .pricing {
+            h4{
+              align-self: center;
+            }
+            display: flex;
+          }
+        }
+        .mainContent {
+          text-align: center;
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: space-between;
+          .cover {
+            box-sizing: border-box;
+            .companyTitle {
+              box-sizing: content-box;
+            }
+          }
+          .features {
+            box-sizing: border-box;
+            margin: 5px;
+            padding-bottom: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+            .streamer-link {
+              .mybutton{
+                color: white;
+                
+                background-color: #478592;
+                padding: 5px 15px 5px 15px;
+                border-radius: 10px;
+              }
+            }
+          }
+        }
+      }
+      header {
+        margin: auto;
+        .mainBorderStyles;
+        background-color: #d9c299;
+        display: flex;
+        justify-content: space-between;
+        .logobox {
+          color: #162938;
+        }
+        nav {
+          .myLink {
+            margin-right: 10px;
+            color: #162938;
+            }
+          }
+        }
+      }
+      footer {
+        display: flex;
+        justify-content: center;
+        .mainBorderStyles;
+        .backgroundStyles;
+        border-radius: 0 0 5px 5px;
+      }
+    }
+  }
+#popGame1 {
+  img {
+    .responsiveImg;
+  }
+}
+#popGame2 {
+  img {
+    .responsiveImg;
+  }
+}
+#popGame3 {
+  img {
+    .responsiveImg;
+  }
+}
+#popGame4 {
+  img {
+    .responsiveImg;
+  }
+}
+#popGame5 {
+  img {
+    .responsiveImg;
+  }
+}
