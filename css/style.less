@@ -41,10 +41,12 @@ html {
         border-radius: 5px 5px 5px 5px;
         height: 80%;
         .leftMenu {
-          .mainBorderStyles;
-          border-style: none solid none none;
-          border-radius: 0;
-          padding: 10px;
+          @media screen and (max-width: 600px) {
+            display: none;
+          }
+          //@media only screen and (min-width: 768px) and (max-width: 959px){
+
+          //}
           display: flex;
           flex-flow: column;
           justify-content: space-between;

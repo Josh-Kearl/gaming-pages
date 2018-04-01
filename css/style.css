@@ -48,17 +48,15 @@ html body .backgroundContainer .main-container {
   height: 80%;
 }
 html body .backgroundContainer .main-container .leftMenu {
-  border: 5px #f1dbce solid;
-  border-radius: 5px 5px 0 0;
-  padding: 5px;
-  box-shadow: 10px 10px 40px -6px #000000;
-  border-style: none solid none none;
-  border-radius: 0;
-  padding: 10px;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
   max-width: 20%;
+}
+@media screen and (max-width: 600px) {
+  html body .backgroundContainer .main-container .leftMenu {
+    display: none;
+  }
 }
 html body .backgroundContainer .main-container .leftMenu .popular-games-section {
   display: flex;
