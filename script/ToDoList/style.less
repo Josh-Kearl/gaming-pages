@@ -60,7 +60,40 @@ body {
       }
       .right {
         padding-right: 20px;
+        .sideNavActive{
 
+        }
+        .sideNav{
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 20;
+          top: 0;
+          right: 0;
+          background-color: #111;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+          .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            &:hover{
+              color: #f1f1f1;
+
+            }
+          }
+          .sidenav .xbutton {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+          }
+        }
       }
     }
     .main {
@@ -71,6 +104,7 @@ body {
         justify-content: space-between;
         position: relative;
       }
+
       .headLeft {
 
       }
@@ -79,7 +113,7 @@ body {
         .toDoRow{
           background: #FFFFFF;
           width: 100%;
-          display: flex;
+          display: none;
           height: 45px;
           align-items: center;
           padding: 12px 8px 12px 40px;

@@ -7,9 +7,9 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="action.js"></script>
+    <script src="script/ToDoList/actions.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="script/ToDoList/style.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
@@ -20,6 +20,12 @@
         </div>
         <div class="right">
             <i class="fa fa-bars" aria-hidden="true"></i>
+            <div class="sideNav">
+                <a href ="javascript:void(0)" class="xbutton">&times;</a>
+                <a href="#">Save</a>
+                <a href="#">New List</a>
+                <a href="#">Check Dates</a>
+            </div>
         </div>
     </div>
 
@@ -32,6 +38,7 @@
                 <a class="addTask">Add List</a>
             </div>
         </header>
+        <div class ="todayTasks" style="display: none">Today</div>
         <div class="list">
             <div class="toDoRow">
                 <span class="checkMark"><i class="fas fa-check-square"></i></span>
@@ -39,6 +46,7 @@
                 <a class="deleteBtn"><i class="fas fa-minus-square"></i></a>
             </div>
         </div>
+        <div class="weekTasks" style="display: none">Weekly Tasks</div>
     </div>
 </div>
 </body>
