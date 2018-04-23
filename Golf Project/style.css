@@ -1,0 +1,26 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.sCard {
+  display: flex;
+}
+.sCard .leftMenu .pheader {
+  padding: 15px;
+}
+.sCard .rightMenu {
+  display: flex;
+  justify-content: space-evenly;
+}
+.sCard .rightMenu .column {
+  border: 1px solid #dadfea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sCard .rightMenu .holeInput {
+  width: 3em;
+}
