@@ -1,32 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+
 html, body{
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
+
+
+
 }
 
-.sCard {
+input {
+  width:100%;
+}
+
+
+body {
+  background: #8aeaf2;
   display: flex;
-  .leftMenu {
-    .pheader {
-      padding: 15px;
-    }
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
 
-  }
-  .rightMenu {
-    display: flex;
-    justify-content: space-evenly;
-
-    .column {
-      border: 1px solid #dadfea;
+  .container {
+    width: 80%;
+    height: 90%;
+    background: #1d2e48 url("https://media.golfdigest.com/photos/55ce3b614759c60c08236f2e/master/pass/the-prince-golf-course-6.jpg");
+    border-radius: 6px;
+    position: relative;
+    .mainHeader{
       display: flex;
-      flex-direction: column;
-      align-items: center;
-
+      align-content: space-evenly;
+      justify-content: space-evenly;
     }
-    .holeInput{
-      width: 3em;
-    }
+    .sCard {
+      display: flex;
+      justify-content: space-evenly;
 
+      .leftMenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+      .rightMenu {
+        display: flex;
+        margin: 0px;
+        padding: 0px;
+        flex-shrink: 3;
+        width: 90%;
+        .column {
+          border: 1px solid #dadfea;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 0px;
+          margin: 0px;
+
+        }
+
+      }
+    }
   }
 }
