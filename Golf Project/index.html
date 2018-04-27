@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="style.css">
     <script src="actions.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Title</title>
 
@@ -13,11 +14,15 @@
 <body>
     <div class="container">
     <header class="mainHeader">
-        <select onchange="getCourse(this.value)" class="courseDropdown"></select>
-        <select onchange="setTee(this.value)" class="teeDropdown"></select>
+        <select onchange="getCourse(this.value)" class="courseDropdown">
+            <option value="default">Please select a course</option>
+        </select>
+        <select onchange="setTee(this.value)" class="teeDropdown">
+        </select>
     </header>
         <div class="sCard">
-            <div class="leftMenu"></div>
+            <div class="leftMenu">
+            </div>
             <div class="rightMenu"></div>
         </div>
     </div>

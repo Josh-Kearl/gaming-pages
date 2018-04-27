@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -8,57 +9,59 @@ html, body{
   width: 100%;
   margin: 0;
   padding: 0;
-
-
-
 }
 
 input {
-  width:100%;
+  width: 48px;
 }
 
 
 body {
-  background: #8aeaf2;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Open Sans', sans-serif;
-  position: relative;
-
+  .mainHeader{
+    display: flex;
+    justify-content: center;
+  }
+  background: #8aeaf2;
   .container {
-    width: 80%;
+    width: 95%;
     height: 90%;
     background: #1d2e48 url("https://media.golfdigest.com/photos/55ce3b614759c60c08236f2e/master/pass/the-prince-golf-course-6.jpg");
-    border-radius: 6px;
-    position: relative;
-    .mainHeader{
-      display: flex;
-      align-content: space-evenly;
-      justify-content: space-evenly;
-    }
+
     .sCard {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-around;
 
+      border: 3px solid #CC0000;
+      background: #CC0000;
       .leftMenu {
+        font-style: italic;
         display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
+        flex-flow: column wrap;
+
       }
       .rightMenu {
-        display: flex;
         margin: 0px;
         padding: 0px;
-        flex-shrink: 3;
-        width: 90%;
-        .column {
-          border: 1px solid #dadfea;
+        #holeThrough18 {
           display: flex;
-          flex-direction: column;
-          align-items: center;
+          justify-content: space-between;
+        }
+        #yardage {
+          display: flex;
+          justify-content: space-between;
+        }
+        #scoreSlot{
+        }
+
+        .column {
+          color: #FFFFFF;
           padding: 0px;
           margin: 0px;
+
 
         }
 
