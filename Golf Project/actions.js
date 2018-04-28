@@ -1,8 +1,8 @@
 var allcourses;
 var selcourse;
-var numplayers = 1;
 
 loadDoc();
+
 
 
 function loadDoc(){
@@ -17,9 +17,8 @@ function loadDoc(){
                     <option value ='"+ allcourses.courses[i].id +"'>\
                 " + allcourses.courses[i].name +"</option>");
             }
-
-
             $(".rightMenu").empty();
+            $(".leftMenu").empty();
         }
     };
 
@@ -42,9 +41,10 @@ function getCourse(courseid){
                 for (let i = 0; i < holeontees.length; i++){
                     teeSelector.append("<option value ='"+ i +"'>"+ holeontees[i].teeType +"</option>")
                 }
+
+            teeSelector.prepend("<option value ='default' selected='selected'>Please select your teeBox</option>");
             $(".rightMenu").empty();
             $(".leftMenu").empty();
-            teeSelector.prepend("<option value ='default' selected='selected'>Please select your teeBox</option>");
         }
     };
     xhttp.open("GET", "https://uxcobra.com/golfapi/course"+ courseid +".txt", true);
@@ -75,35 +75,58 @@ function setTee(teeindex){
     }
     node1.appendTo($(".rightMenu"));
     node2.appendTo($(".rightMenu"));
-
-
-
     console.log(holesArray);
-    buildCard()
 
+
+    buildCard();
 }
 
 
-
-
-function buildCard (){
+function buildCard (numPlayers) {
     let playerArray = [];
     let scoreArray = [];
     let scoreNode;
     let titleNode;
+    numPlayers = $(".playerSelect option:selected").text();
 
 
-    for (let p = 1; p <= numplayers; p++){
-        playerArray.push("<div class='players'>Player: " + p + "</div>");
+    for (let p = 1; p <= numPlayers; p++) {
+        playerArray.push("<div contenteditable='true' class='players'>Player: " + p + "</div>");
         titleNode = $("\
         <div class ='holes'> Hole #</div>\
-        <div class='yards'>Tee box yardage</div>" + playerArray.join(""));
-
-        for(let h = 0; h < selcourse.data.holes.length; h++){
-            scoreArray.push("<input id='p"+ p +"h "+ h +"' type='text' class='holeinput'>");
-            scoreNode = $("<div class='row' id='scoreSlot'>" + scoreArray.join("") + "</div>");
+        <div class='yards'>Tee box yardage</div>\
+        <div class='playerBox'>" + playerArray.join("")+ "</div>");
+        for (let h = 0; h < selcourse.data.holes.length; h++) {
+            scoreArray.push("<input id='p" + p + "h " + h + "' type='text' class='holeinput' size='2'>");
+            if (p === 1 && h === 17) {
+                scoreNode = $("<div class='row' id ='scoreSlot'>" + scoreArray.join("") + "</div>");
+                scoreNode.appendTo($(".rightMenu"));
+                scoreNode = [];
+            } else if (p === 2 && h === 17) {
+                scoreNode = $("<div class='row' id ='scoreSlot2'>" + scoreArray.slice(18).join("") + "</div>");
+                scoreNode.appendTo($(".rightMenu"));
+                scoreNode = [];
+            } else if (p === 3 && h === 17) {
+                scoreNode = $("<div class='row' id ='scoreSlot3'>" + scoreArray.slice(36).join("") + "</div>");
+                scoreNode.appendTo($(".rightMenu"));
+                scoreNode = [];
+            } else if (p === 4 && h === 17) {
+                scoreNode = $("<div class='row' id ='scoreSlot4'>" + scoreArray.slice(54).join("") + "</div>");
+                scoreNode.appendTo($(".rightMenu"));
+                scoreNode = [];
+            }
         }
-        scoreNode.appendTo($(".rightMenu"));
-        titleNode.appendTo($(".leftMenu"));
+
+
     }
+    console.log(scoreArray);
+    titleNode.appendTo($(".leftMenu"));
+
+
 }
+
+function createHandicap () {
+    $(".sCard").append("<div class='hcpRow'></div>")
+}
+
+

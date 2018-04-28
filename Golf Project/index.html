@@ -14,10 +14,18 @@
 <body>
     <div class="container">
     <header class="mainHeader">
+        <select class="playerSelect">
+            <option value="default">Please select players</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
         <select onchange="getCourse(this.value)" class="courseDropdown">
             <option value="default">Please select a course</option>
         </select>
         <select onchange="setTee(this.value)" class="teeDropdown">
+            <option value="default">Please select a course first</option>
         </select>
     </header>
         <div class="sCard">

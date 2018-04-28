@@ -12,7 +12,8 @@ html, body{
 }
 
 input {
-  width: 48px;
+  width: 36px;
+  padding: 8px;
 }
 
 
@@ -32,20 +33,33 @@ body {
 
     .sCard {
       display: flex;
-      justify-content: space-around;
+
 
       border: 3px solid #CC0000;
       background: #CC0000;
       .leftMenu {
         font-style: italic;
         display: flex;
-        justify-content: center;
         flex-flow: column wrap;
+        margin-right: 10px;
+          .players{
+            padding-top: 12px;
+            text-align: center;
+        }
+          .holes{
+            text-align: center;
+            padding-bottom: 2px;
+          }
+          .yards{
 
+          }
       }
       .rightMenu {
+        display: flex;
         margin: 0px;
-        padding: 0px;
+        padding: 0 1%;
+        flex-flow: column;
+        justify-content: space-around;
         #holeThrough18 {
           display: flex;
           justify-content: space-between;

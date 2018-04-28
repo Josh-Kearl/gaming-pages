@@ -10,7 +10,8 @@ body {
   padding: 0;
 }
 input {
-  width: 48px;
+  width: 36px;
+  padding: 8px;
 }
 body {
   display: flex;
@@ -29,19 +30,29 @@ body .container {
 }
 body .container .sCard {
   display: flex;
-  justify-content: space-around;
   border: 3px solid #CC0000;
   background: #CC0000;
 }
 body .container .sCard .leftMenu {
   font-style: italic;
   display: flex;
-  justify-content: center;
   flex-flow: column wrap;
+  margin-right: 10px;
+}
+body .container .sCard .leftMenu .players {
+  padding-top: 12px;
+  text-align: center;
+}
+body .container .sCard .leftMenu .holes {
+  text-align: center;
+  padding-bottom: 2px;
 }
 body .container .sCard .rightMenu {
+  display: flex;
   margin: 0px;
-  padding: 0px;
+  padding: 0 1%;
+  flex-flow: column;
+  justify-content: space-around;
 }
 body .container .sCard .rightMenu #holeThrough18 {
   display: flex;
