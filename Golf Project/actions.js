@@ -55,8 +55,10 @@ function setTee(teeindex){
     $(".rightMenu").html("");
     let holesArray = [];
     let yardsArray = [];
+    let hcapArray = [];
     let node1;
     let node2;
+    let node3;
     let mycourse = selcourse.data.holes;
 
     for(let i = 0; i < mycourse.length; i++){
@@ -68,15 +70,21 @@ function setTee(teeindex){
             <div class='column' id ='c" + i + "'>\
                 <span class='yds'>" + mycourse[i].teeBoxes[teeindex].yards +"</span>\
             </div>");
+        hcapArray.push("\
+            <div class='column'>\
+                <span class='mhcpData'>" + mycourse[i].teeBoxes[teeindex].hcp + "</span>\
+            </div>");
 
          node1 = $("<div class='row' id='holeThrough18'>" + holesArray.join("") +"</div>");
          node2 = $("<div class='row' id='yardage'>" + yardsArray.join("") + "</div>");
+         node3 = $("<div class='row' id='mHandicapRow'>" + hcapArray.join("") + "</div>");
 
     }
     node1.appendTo($(".rightMenu"));
     node2.appendTo($(".rightMenu"));
+    node3.appendTo($(".rightMenu"));
     console.log(holesArray);
-
+    $(".leftMenu").empty();
 
     buildCard();
 }
@@ -93,9 +101,10 @@ function buildCard (numPlayers) {
     for (let p = 1; p <= numPlayers; p++) {
         playerArray.push("<div contenteditable='true' class='players'>Player: " + p + "</div>");
         titleNode = $("\
-        <div class ='holes'> Hole #</div>\
-        <div class='yards'>Tee box yardage</div>\
-        <div class='playerBox'>" + playerArray.join("")+ "</div>");
+            <div class ='holes'> Hole #:</div>\
+            <div class='yards'>Tee box yardage:</div>\
+            <div class='mensHandicap'>Handicap:</div>\
+            <div class='playerBox'>" + playerArray.join("")+ "</div>");
         for (let h = 0; h < selcourse.data.holes.length; h++) {
             scoreArray.push("<input id='p" + p + "h " + h + "' type='text' class='holeinput' size='2'>");
             if (p === 1 && h === 17) {
@@ -125,8 +134,5 @@ function buildCard (numPlayers) {
 
 }
 
-function createHandicap () {
-    $(".sCard").append("<div class='hcpRow'></div>")
-}
 
 

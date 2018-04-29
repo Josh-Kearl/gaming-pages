@@ -24,16 +24,22 @@ body .mainHeader {
   justify-content: center;
 }
 body .container {
+  display: flex;
   width: 95%;
   height: 90%;
   background: #1d2e48 url("https://media.golfdigest.com/photos/55ce3b614759c60c08236f2e/master/pass/the-prince-golf-course-6.jpg");
+  align-items: center;
+  flex-flow: column wrap;
 }
 body .container .sCard {
   display: flex;
+  justify-content: center;
+  width: 80%;
   border: 3px solid #CC0000;
-  background: #CC0000;
+  background: #1d2e48;
 }
 body .container .sCard .leftMenu {
+  color: #FFFFFF;
   font-style: italic;
   display: flex;
   flex-flow: column wrap;
@@ -47,6 +53,12 @@ body .container .sCard .leftMenu .holes {
   text-align: center;
   padding-bottom: 2px;
 }
+body .container .sCard .leftMenu .yards {
+  padding-bottom: 2px;
+}
+body .container .sCard .leftMenu .mensHandicap {
+  text-align: center;
+}
 body .container .sCard .rightMenu {
   display: flex;
   margin: 0px;
@@ -59,6 +71,10 @@ body .container .sCard .rightMenu #holeThrough18 {
   justify-content: space-between;
 }
 body .container .sCard .rightMenu #yardage {
+  display: flex;
+  justify-content: space-between;
+}
+body .container .sCard .rightMenu #mHandicapRow {
   display: flex;
   justify-content: space-between;
 }
