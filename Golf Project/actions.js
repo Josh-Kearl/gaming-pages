@@ -1,5 +1,15 @@
 var allcourses;
 var selcourse;
+var totalYards;
+var totalYardsOut;
+var totalYardsIn;
+var parTotal;
+var parIn;
+var parOUt;
+var scoreIn;
+var scoreOut;
+var scoreTotal;
+
 
 loadDoc();
 
@@ -17,7 +27,7 @@ function loadDoc(){
                     <option value ='"+ allcourses.courses[i].id +"'>\
                 " + allcourses.courses[i].name +"</option>");
             }
-            $(".rightMenu").empty();
+            $(".midMenu").empty();
             $(".leftMenu").empty();
         }
     };
@@ -43,7 +53,7 @@ function getCourse(courseid){
                 }
 
             teeSelector.prepend("<option value ='default' selected='selected'>Please select your teeBox</option>");
-            $(".rightMenu").empty();
+            $(".midMenu").empty();
             $(".leftMenu").empty();
         }
     };
@@ -52,13 +62,15 @@ function getCourse(courseid){
 }
 
 function setTee(teeindex){
-    $(".rightMenu").html("");
+    $(".midMenu").html("");
     let holesArray = [];
     let yardsArray = [];
     let hcapArray = [];
+    let parArray= [];
     let node1;
     let node2;
     let node3;
+    let node4;
     let mycourse = selcourse.data.holes;
 
     for(let i = 0; i < mycourse.length; i++){
@@ -74,18 +86,24 @@ function setTee(teeindex){
             <div class='column'>\
                 <span class='mhcpData'>" + mycourse[i].teeBoxes[teeindex].hcp + "</span>\
             </div>");
+        parArray.push("\
+            <div class='column'>\
+                <span class='par'>" + mycourse[i].teeBoxes[teeindex].par + "</span>\
+            </div>");
 
          node1 = $("<div class='row' id='holeThrough18'>" + holesArray.join("") +"</div>");
          node2 = $("<div class='row' id='yardage'>" + yardsArray.join("") + "</div>");
          node3 = $("<div class='row' id='mHandicapRow'>" + hcapArray.join("") + "</div>");
+         node4 = $("<div class='row' id='parOnTeeBox'>" + parArray.join("") +"</div>");
 
     }
-    node1.appendTo($(".rightMenu"));
-    node2.appendTo($(".rightMenu"));
-    node3.appendTo($(".rightMenu"));
+    node1.appendTo($(".midMenu"));
+    node2.appendTo($(".midMenu"));
+    node3.appendTo($(".midMenu"));
+    node4.appendTo($(".midMenu"));
     console.log(holesArray);
     $(".leftMenu").empty();
-
+    
     buildCard();
 }
 
@@ -95,6 +113,7 @@ function buildCard (numPlayers) {
     let scoreArray = [];
     let scoreNode;
     let titleNode;
+
     numPlayers = $(".playerSelect option:selected").text();
 
 
@@ -104,24 +123,26 @@ function buildCard (numPlayers) {
             <div class ='holes'> Hole #:</div>\
             <div class='yards'>Tee box yardage:</div>\
             <div class='mensHandicap'>Handicap:</div>\
-            <div class='playerBox'>" + playerArray.join("")+ "</div>");
+            <div class='pars'>Par:</div>\
+            <div class='playerBox'>" + playerArray.join("")+ "</div>\
+            ");
         for (let h = 0; h < selcourse.data.holes.length; h++) {
-            scoreArray.push("<input id='p" + p + "h " + h + "' type='text' class='holeinput' size='2'>");
+            scoreArray.push("<input id='p" + p + "h " + h + "' oninput='this.value = this.value.replace(/[^1-9]/, defaultValue)' type='text' class='holeinput' size='2'>");
             if (p === 1 && h === 17) {
                 scoreNode = $("<div class='row' id ='scoreSlot'>" + scoreArray.join("") + "</div>");
-                scoreNode.appendTo($(".rightMenu"));
+                scoreNode.appendTo($(".midMenu"));
                 scoreNode = [];
             } else if (p === 2 && h === 17) {
                 scoreNode = $("<div class='row' id ='scoreSlot2'>" + scoreArray.slice(18).join("") + "</div>");
-                scoreNode.appendTo($(".rightMenu"));
+                scoreNode.appendTo($(".midMenu"));
                 scoreNode = [];
             } else if (p === 3 && h === 17) {
                 scoreNode = $("<div class='row' id ='scoreSlot3'>" + scoreArray.slice(36).join("") + "</div>");
-                scoreNode.appendTo($(".rightMenu"));
+                scoreNode.appendTo($(".midMenu"));
                 scoreNode = [];
             } else if (p === 4 && h === 17) {
                 scoreNode = $("<div class='row' id ='scoreSlot4'>" + scoreArray.slice(54).join("") + "</div>");
-                scoreNode.appendTo($(".rightMenu"));
+                scoreNode.appendTo($(".midMenu"));
                 scoreNode = [];
             }
         }
@@ -130,9 +151,11 @@ function buildCard (numPlayers) {
     }
     console.log(scoreArray);
     titleNode.appendTo($(".leftMenu"));
-
+    
 
 }
+
+
 
 
 

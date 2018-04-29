@@ -1,3 +1,15 @@
+.flexProperties(){
+  display: flex;
+  justify-content: space-between;
+}
+
+.descriptionProperties(){
+  text-align: center;
+  padding-bottom: 2px;
+}
+
+
+
 * {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
@@ -53,34 +65,40 @@ body {
             text-align: center;
         }
           .holes{
-            text-align: center;
-            padding-bottom: 2px;
+            .descriptionProperties
           }
         .yards{
-          padding-bottom: 2px;
+          .descriptionProperties
         }
         .mensHandicap{
+          .descriptionProperties
+        }
+        .pars {
           text-align: center;
         }
 
       }
-      .rightMenu {
+      .midMenu {
         display: flex;
         margin: 0px;
         padding: 0 1%;
         flex-flow: column;
         justify-content: space-around;
+
         #holeThrough18 {
-          display: flex;
-          justify-content: space-between;
+         .flexProperties()
         }
+
         #yardage {
-          display: flex;
-          justify-content: space-between;
+          .flexProperties()
         }
+
         #mHandicapRow{
-          display:flex;
-          justify-content: space-between;
+          .flexProperties()
+        }
+
+        #parOnTeeBox{
+          .flexProperties()
         }
 
         .column {
