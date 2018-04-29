@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ascension Gaming</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" href="css/streamer-highlights-styles.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="backgroundContainer">
     <header>
         <span class="logobox">
             <i class="fa fa-fire"></i>
+            <a class="myLink" href="user-signin.html">
+                <button id="loginButton" class="login">Login Here.</button>
+            </a>
         </span>
         <nav>
             <a class="myLink" href="Ascension.html">
@@ -23,45 +26,71 @@
             <a class="myLink" href="game-list.html">
                 <span>Games</span>
             </a>
-            <a class="myLink" href="Ascension.html">
-                <span class="menuDrop">
-                    <a href="user-signin.html">
-                        <i class="fa fa-bars" aria-hidden="true"></i>
-                    </a>
-                </span>
+            <a class="myLink" href="toDoList.html">
+                <span class="menuDrop"><i class="fa fa-bars" aria-hidden="true"></i></span>
             </a>
+            <div class="overlay">
+                <div class="wrap">
+
+                </div>
+            </div>
         </nav>
     </header>
     <div class="main-container">
+        <aside class="leftMenu">
+            <div class="popular-games-section">
+                <h3>Popular Games</h3>
+                <div id="popGame1" class="popGames">
+                    <img id="destiny2" src="images/destiny2.jpg" alt="destiny 2" align="center">
+                </div>
+                <div id="popGame2" class="popGames">
+                    <img src="images/league-of-legends.jpg">
+                </div>
+                <div id="popGame3" class="popGames">
+                    <img src="images/rocket-league.png">
+                </div>
+                <div id="popGame4" class="popGames">
+                    <img src="images/terraria.jpg">
+                </div>
+                <div id="popGame5" class="popGames">
+                    <img src="images/wow-legion.jpg">
+                </div>
+            </div>
+            <div class="gamePage">
+                <a href ="game-list.html">Game Library</a>
+            </div>
+            <div class="priceHead">
+                <h4 class="pricing-head">Pricing</h4>
+            </div>
+            <div class="pricing">
+                <p>$12.99</p>
+                <p>$6.99</p>
+                <p>$25</p>
+                <p><i class="fa fa-cc-visa" aria-hidden="true"></i></p>
+                <p><i class="fa fa-cc-mastercard" aria-hidden="true"></i></p>
+                <p><i class="fa fa-cc-amex" aria-hidden="true"></i></p>
+            </div>
+        </aside>
         <div class="mainContent">
             <div class="cover">
                 <div class="companyTitle">
                     <h1>Ascension Gaming</h1>
-                    <p class="featured-streamer">Here we would like to feature some streamers that we liked and who may need some help getting those views.</p>
                 </div>
             </div>
-            <div class="content">
-                <div class="videoWrapper">
-                    <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/YAPdCHBjZ20" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
+            <div class="content"></div>
             <div class="features">
-                <h2 class="stream-name">DManYuki</h2>
+                <h2 class="stories">Featured Stories</h2>
                 <div class="rightStory">
-                    <h4 class="about-streamer">About this streamer</h4>
                     <p class="Story">Ball tip short ribs ham hock corned beef flank kevin hamburger bacon. Jowl tenderloin chuck capicola, short loin ham pancetta shankle bresaola sirloin ribeye landjaeger chicken. Swine short loin drumstick pork, chuck pancetta leberkas meatloaf pork belly kevin. Turkey prosciutto cow short loin pork swine. Filet mignon swine drumstick bacon ribeye tail shoulder capicola pork belly. Swine pancetta beef ribs chicken prosciutto. Pork belly beef ribs sausage ham hock kielbasa, ball tip cow alcatra beef biltong.</p>
                 </div>
                 <div class="leftStory">
-                    <h4 class="streamer-comments">"Insert Comments"</h4>
                     <p class="leftStory">Ham hock bresaola t-bone pork rump spare ribs bacon. Doner pork belly bacon, pork loin shank capicola picanha chicken kevin meatball shankle jowl. Chuck cupim buffalo venison doner, ball tip ham hock picanha. Strip steak pork t-bone frankfurter landjaeger porchetta turkey chicken leberkas tri-tip sausage. Boudin shankle porchetta ball tip pork belly pork loin fatback landjaeger capicola sirloin jerky buffalo frankfurter flank chuck. Sirloin leberkas ground round ham hock meatloaf spare ribs chuck pork porchetta andouille.</p>
                 </div>
                 <div class="streamer-link">
-                    <a class="youtubeLink" href="https://www.youtube.com/channel/UC45FOdJisC42rzhDXP7_wpw">Link to Youtube Page!</a>
-                </div>
-                <div>
-                    <p>this streamer has mature content: videos may contain swearing or other mature content.</p>
+                    <p>Check out our featured streamer bellow!</p>
+                    <a class="streamer-highlights" href="streamer-highlights.html">
+                        <button class="mybutton">Click here</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -72,5 +101,6 @@
         </p>
     </footer>
 </div>
+
 </body>
 </html>
