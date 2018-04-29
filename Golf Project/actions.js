@@ -155,6 +155,24 @@ function buildCard (numPlayers) {
 
 }
 
+function scoreMessage (){
+    let netTotal = parseInt(scoreTotal) - parseInt(parTotal);
+    if ((netTotal) === 5){
+        $(".message").text("Keep at it you will improve eventually...");
+    } else if (netTotal > 5){
+        $(".message").text("Going to have to start somewhere right?");
+    } else if (netTotal <= 0 && netTotal >= -5){
+        $(".message").text("Well played my friend takes some serious skill to play that good");
+    } else if (netTotal < -6){
+        $(".message").text("You must be in the WPGA or PGA or something because you are amazing!");
+    }
+}
+
+
+function setTotals (){
+
+}
+
 
 
 

@@ -31,6 +31,9 @@ body .container {
   align-items: center;
   flex-flow: column wrap;
 }
+body .container .message {
+  display: none;
+}
 body .container .sCard {
   display: flex;
   justify-content: center;
